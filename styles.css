@@ -1,0 +1,208 @@
+ /* Overall styling */
+
+ *, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 18px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  min-width: 375px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+}
+
+:root {
+  --white: #fff;
+
+  --scissors-gradient-1: #ec9e0e;
+  --scissors-gradient-2: #eca922;
+
+  --paper-gradient-1: #4865f4;
+  --paper-gradient-2: #5671f5;
+
+  --rock-gradient-1: #dc2e4e;
+  --rock-gradient-2: #dd405d;
+
+  --lizard-gradient-1: #834fe3;
+  --lizard-gradient-2: #8c5de5;
+
+  --cyan-gradient-1: #40b9ce;
+  --cyan-gradient-2: #52bed1;
+
+  --neutral-dark-text: #3b4363;
+  --neutral-score-text: #2a46c0;
+  --neutral-header-outline: #606e85;
+
+  --background-gradient-1: #1f3756;
+  --background-gradient-2: #141539;
+}
+
+/* element styling */
+
+html, body, button, input {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-weight: 600;
+  color: var(--white);
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-image: linear-gradient(var(--background-gradient-1), var(--background-gradient-2));
+}
+
+button {
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 38px;
+  line-height: 31px;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 0;
+}
+
+h3 {
+  color: var(--neutral-score-text);
+  line-height: 0;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+}
+
+/* Main Wrapper */
+.wrapper-body {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1.2rem;
+  padding-top: 2.5rem;
+  height: 100%;
+}
+
+/* Rock, Paper, Scissors header tile */
+.wrapper-header-banner {
+  border: 3px solid var(--neutral-header-outline);
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem 0 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.wrapper-score-tile {
+  background-color: var(--white);
+  height: 115px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+
+.score-number {
+  color: var(--neutral-dark-text);
+  font-size: 70px;
+  margin-top: -15px;
+}
+
+/* END - Rock, Paper, Scissors header tile */
+
+
+/* Rules Button - Bottom right */
+.btn-rules {
+  text-transform: uppercase;
+  border: 2px solid var(--neutral-header-outline);
+  background: transparent;
+  letter-spacing: 0.08rem;
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+}
+
+.wrapper-rules-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Rules Modal Window */
+.wrapper-rules-modal {
+  display: block;
+  background-color: var(--white);
+  color: var(--neutral-dark-text);
+  text-transform: uppercase;
+  width: 415px;
+  max-width: 100%;
+  height: 400px;
+  border-radius: 0.5rem;
+  padding: 1.2rem 1.8rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.modal-close {
+  display: none;
+}
+
+.wrapper-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.rules-image {
+  display: block;
+  margin: 0 auto;
+  padding-top: 1.8rem;
+}
+
+.wrapper-rules-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper-rules-top img {
+  width: 20px;
+}
+
+.wrapper-rules-top button {
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	outline: inherit;
+}
+/* END - Rules Modal Window */
+
+
+
+.attribution { 
+  font-size: 11px;
+  text-align: center; 
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
